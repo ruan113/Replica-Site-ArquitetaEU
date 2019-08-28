@@ -1,0 +1,60 @@
+
+/* Auxiliares */
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .vmarg-small {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  /* .vmarg-medium {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  } */
+  
+  /* .hmarg-small {
+    margin-left: 15px;
+    margin-right: 15px;
+  } */
+  /* 
+  .hmarg-medium {
+    margin-left: 30px;
+    margin-right: 30px;
+  } */
+  
+  /* .vpad-small {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  } */
+  
+  .vpad-medium {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .hpad-small {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* .hpad-medium {
+    padding-left: 30px;
+    padding-right: 30px;
+  } */
+  
+  .hbar {
+    width: 15%;
+    border-top: 2px solid #4db6ac;
+  }
+  
+  .section-padding {
+    padding: 105px 0;
+  }
+
+  
