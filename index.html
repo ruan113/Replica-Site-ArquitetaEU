@@ -17,18 +17,15 @@
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"></script>
 
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/339d4e6b9a.js"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
-
-    <!-- SmoothScroll -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
-
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/339d4e6b9a.js"></script>
 
   </head>
 
@@ -46,22 +43,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a data-scroll class="nav-link" href="#section-intro">Home</a>
+            <a class="nav-link" href="#section-intro">Home</a>
           </li>
           <li class="nav-item">
-            <a data-scroll class="nav-link" href="#section-projetos">Projetos</a>
+            <a class="nav-link" href="#section-projetos">Projetos</a>
           </li>
           <li class="nav-item">
-            <a data-scroll class="nav-link" href="#section-frases">Referências</a>
+            <a class="nav-link" href="#section-frases">Referências</a>
           </li>
           <li class="nav-item">
-            <a data-scroll class="nav-link" href="#section-atividades">Atividades</a>
+            <a class="nav-link" href="#section-atividades">Atividades</a>
           </li>
           <li class="nav-item">
-            <a data-scroll class="nav-link" href="#section-perfil">Perfil</a>
+            <a class="nav-link" href="#section-perfil">Perfil</a>
           </li>
           <li class="nav-item">
-            <a data-scroll class="nav-link" href="#section-footer">Contato</a>
+            <a class="nav-link" href="#section-footer">Contato</a>
           </li>
         </ul>
       </div>
@@ -83,7 +80,7 @@
         <hr class="hbar" />
       </div>
       <div class="intro__icon">
-        <i data-scroll href="#section-projetos" class="fa fa-arrow-down"></i>
+        <i class="fa fa-arrow-down" href="#section-projetos" class="fa fa-arrow-down"></i>
       </div>
     </section>
     <!-- Intro (FIM) -->
@@ -569,11 +566,15 @@
   </body>
 
   <script type="text/javascript">
-    $(function () {
-      var scroll = new SmoothScroll('a[href*="#section-"]');
-    });
-    $(function () {
-      var scroll = new SmoothScroll('i[href*="#section-projetos"]');
+    // Scroll Smooth to section
+    document.querySelectorAll('a[href^="#section-"]').forEach($anchor => {
+      $anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start' //scroll to top of the target element
+        });
+      });
     });
   </script>
 
