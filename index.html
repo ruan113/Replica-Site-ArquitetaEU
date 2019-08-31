@@ -24,8 +24,12 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
 
+    <!-- SmoothScroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/339d4e6b9a.js"></script>
+
   </head>
 
   <body>
@@ -42,22 +46,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a data-scroll class="nav-link" href="#section-intro">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Projetos</a>
+            <a data-scroll class="nav-link" href="#section-projetos">Projetos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Referências</a>
+            <a data-scroll class="nav-link" href="#section-frases">Referências</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Atividades</a>
+            <a data-scroll class="nav-link" href="#section-atividades">Atividades</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Perfil</a>
+            <a data-scroll class="nav-link" href="#section-perfil">Perfil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contato</a>
+            <a data-scroll class="nav-link" href="#section-footer">Contato</a>
           </li>
         </ul>
       </div>
@@ -65,7 +69,7 @@
     <!-- Navbar (FIM) -->
 
     <!-- Intro (INICIO) -->
-    <section id="intro">
+    <section id="section-intro">
       <div class="intro_content vertical-center">
         <img src="images/arquiteturaeu-logo.png" alt="" />
         <br />
@@ -79,13 +83,13 @@
         <hr class="hbar" />
       </div>
       <div class="intro__icon">
-        <i class="fa fa-arrow-down"></i>
+        <i data-scroll href="#section-projetos" class="fa fa-arrow-down"></i>
       </div>
     </section>
     <!-- Intro (FIM) -->
 
     <!-- Projetos (INICIO) -->
-    <section class="section-padding" id="projetos">
+    <section id="section-projetos" class="padding">
       <div class="container">
         <div class="projetos__header vpad-medium">
           <h3 class="titulo">PROJETOS</h3>
@@ -258,7 +262,7 @@
     <!-- Projetos (FIM) -->
 
     <!-- Slide de Frases (INICIO) -->
-    <section id="frases">
+    <section id="section-frases">
       <div id="carouselPanel" class="carousel slide vertical-center" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselPanel" data-slide-to="0" class="active"></li>
@@ -315,7 +319,7 @@
     <!-- Slide de Frases (INICIO) -->
 
     <!-- Atividades (INICIO) -->
-    <section class="section-padding">
+    <section id="section-atividades" class="section-padding">
       <div class="container">
         <div class="projetos__header vpad-medium">
           <h3 class="titulo">ATIVIDADES</h3>
@@ -422,7 +426,7 @@
     <!-- Imagem Motivacional (FIM) -->
 
     <!-- Sobre mim (INICIO) -->
-    <section class="section-padding">
+    <section id="section-perfil" class="section-padding">
       <div class="container">
         <div class="projetos__header vpad-medium">
           <h3 class="titulo">SOBRE MIM</h3>
@@ -537,7 +541,7 @@
     </section>
     <!-- Sobre mim (FIM) -->
 
-    <section id="footer">
+    <section id="section-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -563,6 +567,15 @@
       </div>
     </section>
   </body>
+
+  <script type="text/javascript">
+    $(function () {
+      var scroll = new SmoothScroll('a[href*="#section-"]');
+    });
+    $(function () {
+      var scroll = new SmoothScroll('i[href*="#section-projetos"]');
+    });
+  </script>
 
   </html>
 </DOCTYPE>
