@@ -1,8 +1,6 @@
-
 .navbar {
   z-index: 999;
-  background-color: #ff8a65 !important;
-  overflow: hidden;
+  background-color: #ff8a65;
   position: fixed !important;
   top: 0;
   width: 100%;
@@ -12,8 +10,15 @@
   width: 40px;
 }
 
+.navbar-toggler { 
+  height: 70px;
+  width: 91px;
+  background: #fdd5c9;
+}
+
 .nav-link {
   color: white !important;
+  font-size: 20px;
   margin: 0 5px;
   border-bottom: 2px solid transparent;
 }
@@ -21,4 +26,19 @@
 .nav-link:hover {
   border-bottom: 2px solid #4db6ac;
   background: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-brand > img {
+    width: 85px;
+  }
+  .nav-link { 
+    font-size: 50px;
+    border-bottom: 8px solid transparent;
+  }
+  
+  .nav-link:hover {
+    border-bottom: 8px solid #4db6ac;
+    background: transparent;
+  }
 }
